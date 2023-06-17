@@ -1,6 +1,6 @@
 // Step 6: Retrieve the combination of routes based on the given path
 const mongoose = require('mongoose');
-mongoose.connect('process.env.mongodb://localhost:27017/Graph_routes', {
+mongoose.connect('mongodb://localhost:27017/Graph_routes', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
