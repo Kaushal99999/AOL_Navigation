@@ -1,11 +1,95 @@
+.container {
+  position: absolute;
+  top:0rem;
+  z-index:  7rem;
+  left:0rem;
+  right:0rem;
+  background-image:url(./kisspng-art-of-living-logo-vector-graphics-kriyā-clip-art-sri-sri-ravi-shankar-and-the-peace-process-in-colo-5b6817046c16b7.4622810015335482924427.png);
+  background-size: 250px 100px; /* Set the desired dimensions here */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color:rgba(193, 198, 231, 0.5);
+  position:fixed;
+}
+.gm-style-mtc {
+  display: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-style: solid;
+  border:burlywood;
+  background-color:rgb(241, 194, 143);
+  border-radius: 1.5rem;
+  margin-right: 20rem;
+  font-size:x-large;
+
+
+}
+
+select {
+  width: 30%;
+  padding: 1px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+
+#dst{
+  margin-left:10rem;
+
+
+}
+.container2{
+  display: flex;
+  padding-bottom: 5rem;
+  padding-left: 9rem;
+}
+
 #map {
-    height: 100%;
-    position: relative;
+  position:relative;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.button {
+  margin-left: 27rem;
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid burlywood; 
+  font-size:x-large;
+  border-radius: 1.5rem;
+
+}
+
+.button:hover {
+  background-color:burlywood;
+  color:rgb(111, 71, 8);
+}
+
+body{
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 480px) {
+  .container {
+      max-width: 100%;
+      padding: 10px;
   }
 
-.container{
-    position: absolute;
-    top:0;
-    z-index: 40;
+  select {
+      font-size: 15px;
+  }
+
+  #map{
+    top:200px;
+    height:2500px;
+    width: 100%;
+  }
+
+
 
 }
