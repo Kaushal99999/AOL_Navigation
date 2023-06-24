@@ -8,6 +8,8 @@ function get_current_loc(){
   navigator.geolocation.watchPosition(function(position) {
     c_Lat= position.coords.latitude,
     c_Lng = position.coords.longitude
+    },(error) => {
+      console.error("Error getting user location:", error);
     },{ enableHighAccuracy: true, timeout: 5000, maximumAge: 0 });
       return {lat:c_Lat,lng:c_Lng}
 };
