@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Navigation System</title>
+    <link rel="stylesheet" href="./styles.css">
   
   
   
@@ -10,35 +11,376 @@
   
 </head>
 <body>
-    <div id="map" style="height:750px"></div>
+    <div id="map"></div>
 
     <div class="container">
-     
-        <div>
+     <div class="container2">
+
+    
+        <div id="sorc">
             <label for="source-select">Source:</label>
             <select id="source-select">
+              <optgroup label="Accommodations">
+                <option value="Vishala_Men_Dormitory">Vishala Men Dormitory</option>
+                <option value="Female_Dormitory_Yogini">Female Dormitory Yogini</option>
+                <option value="Aparna_Gate">Aparna</option>
+                <option value="Padmini_Gate">Padmini</option>
+                <optgroup label="Baswa Accommodations">
+                <optgroup label="Baswa Blocks">
+                <option value="Baswa_Accomodation">Baswa Accomodation</option>
+                <option value="Baswa_Accomodation_C">Baswa Block C</option>
+                <option value="Baswa_Accomodation_B">Baswa Block B</option>
+                <option value="Baswa_Accomodation_A">Baswa Block A</option>
+              </optgroup>
+                <optgroup label="Baswa Bunglows">
+                <option value="Baswa_Bunglow_1">Baswa Bunglow 1</option>
+                <option value="Baswa_Bunglow_2">Baswa Bunglow 2 </option>
+                <option value="Baswa_Bunglow_3">Baswa Bunglow 3</option>
+                <option value="Baswa_Bunglow_4">Baswa Bunglow 4</option>
+                <option value="Baswa_Bunglow_5">Baswa Bunglow 5</option>
+              </optgroup>
+            </optgroup>
+                <option value="Meera_Vanam">Meera Vanam</option>
+
+                <optgroup label="Setu Side Accommodations">
+                <option value="Vasuki">Vasuki</option>
+                <option value="Vasuki_2">Vasuki(Back-Side)</option>
+                <option value="Setu">Setu</option>
+                <option value="Nandi">Nandi</option>
+                <option value="Siddhi">Siddhi</option>
+                <option value="Riddhi">Riddhi</option>
+                <option value="Ganesh">Ganesh</option>
+                <option value="Parvati">Parvati</option>
+                <option value="Raddha">Raddha</option>
+                <option value="Meera">Meera</option>
+                <option value="Shiva">Shiva</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Mahavir">Mahavir</option>
+                <option value="Karthik">Mahavir</option>
+                <option value="Adishesha">Adishesha</option>
+              </optgroup>
+
+                <option value="Tulsi_Dormitory">Tulsi Dormitory</option>
+                <option value="Trotakacharya_Kutir">Trotakacharya Kutir</option>
+                <option value="Trotakacharya_Dormitory">Trotakacharya Dormitory</option>
+                <optgroup label="Yagnashala Accommodations">
+                <option value="Yagnashala_Accomodation">Yagnashala Accomodation</option>
+                <option value="Yagnashala_Accomodation_A">Yagnashala Block A</option>
+                <option value="Yagnashala_Accomodation_B">Yagnashala Block B</option>
+                <option value="Yagnashala_Accomodation_C">Yagnashala Block C</option>
+                <option value="Yagnashala_Accomodation_D">Yagnashala Block D</option>
+              </optgroup>
+                <option value="Vrinda_Van">Vrinda Van</option>
+                <option value="Soudamini">Soudamini Apartments</option>
+               
+                <option value="Gopi">Gopi</option>
+                <option value="Gokul">Gokul</option>
+                <option value="Gurukul_Cottages">Gurukul Cottages</option>
+                <option value="Sarda_Vihar">Sarda Vihar</option>
+
+              </optgroup>
+
+              <optgroup label="Course Venues">
+                <option value="Maitreyi_Hall">Maitreyi Hall</option>
+                <option value="Baswa_Hall">Baswa Hall</option>
+                <option value="Jamini_Hall">Jamini Hall</option>
+                <option value="Tripura_Hall">Tripura Hall</option>
+              <option value="Shat_Kriya_Hall">Shat Kriya Hall</option>
+              <option value="Vivasvan_Yogshala">Vivasvan Yogshala</option>
+              <option value="Kapila_Hall">Kapila Hall</option>
+              <option value="Saraswati_Hall_A">Saraswati Hall Block-A</option>
+              <option value="Saraswati_Hall_C">Saraswati Hall Block-C</option>
+              <option value="Gauri_Hall">Gauri Hall</option>
+              <option value="Shankra_Hall">Shankra Hall</option>
+              <option value="Vishalakshi_Mantap_GF">Vishalakshi Mantap GF</option>
+              <option value="Mahavir_Hall">Mahavir Hall</option>
+              <option value="Buddha_Hall">Buddha Hall</option>
+              <option value="Shuka_Hall">Shuka_Hall</option>
+              <option value="Badri_Vishala">BadriVishala</option>
+              <option value="Krishna_Hall">Krishna Hall</option>
+              <option value="Radha_Kunj_ConferenceHall">Radha Kunj Conference Hall</option>
+              <option value="Ganesha_Hall">Ganesha Hall</option>
+              <option value="Annapoorna_Hall">Annapoorna Hall</option>
+            </optgroup>
+
+            <optgroup label="Old Ashram">
+              <option value="TTP_YLTP_Office">TTP and YLTP Office</option>
+              <option value="Narayan">Narayan</option>
+              <option value="Devi_Place">Devi Place</option>
+              <option value="SSRDP">SSRDP</option>
+              <option value="Shanmukha">Shanmukha</option>
+              <option value="Rishimukh">Rishimukh</option>
+              <option value="VVKI">VVKI</option>
+              <option value="SBI">SBI</option>
+              <option value="Vasishta">Vasishta</option>
+              <option value="Vishwamitra">Vishwamitra</option>
+              <option value="Mahalakshmi_Mantap">Mahalakshmi Mantap</option>
+              <option value="Sumeru_Mantap">Sumeru Mantap</option>
+              <option value="Old_Amphitheater">Old Amphitheater</option>
+              <option value="Arundhati">Arundhati</option>
+              <option value="SSIAS">SSIAS</option>
+              <option value="IAHV">IAHV</option>
+              <option value="Gargi_Dinning_Hall">Gargi Dinning Hall</option>
+            </optgroup>
+
+            <optgroup label="Radha Kunj">
+              <option value="Radha_Kunj_Gate2">Radha Kunj Gate 2</option>
+              <option value="Mantap_Radha_Kunj">Mantap Radha Kunj</option>
+              <option value="Krishna_Kutir">Krishna Kutir</option>
+
+
+            </optgroup>
+
+            <optgroup label="Gurukul"> 
+              <option value="Nakshatra_Vanam">Nakshatra Vanam</option>
+              <option value="Devi_Hall">Devi Hall</option>
+              <option value="Markandeya">Markandeya</option>
+              <option value="Veda_Bhavanam">Veda Bhavanam</option>
+              <option value="Vaidic_Bhavanam">Vaidic Bhavanam</option>
+              <option value="Archana">Archana</option>
+              <option value="Gurukul_Prayogshala">Gurukul Prayogshala</option>
+              <option value="Gurukul_Yagnashala">Gurukul Yagnashala</option>
+              <option value="Ganpati_Temple">Sri Pratapa Ganpathi Temple</option>
+              <option value="Gurukul">Veda Agama Pathashala and Vaidik Pathashala</option>
+
+
+            </optgroup>
+
+            <optgroup label="Gates"> 
+              <option value="Gate1">Gate1</option>
+              <option value="Gate5">Gate5</option>
+              <option value="Gate2">Gate2</option>
+              <option value="Gate3">Gate3</option>
+              <option value="Gate4">Gate4</option>
+
+            </optgroup>
+
+            <optgroup label="Dinning_Places"> 
+              <option value="Vishala_Cafe">Vishala Cafe</option>
+              <option value="Annapoorna">Annapoorna</option>
+              <option value="Cafe_Vishala_Bistro">Cafe Vishala Bistro</option>
+              <option value="Panchamrut">Panchamrut</option>
+             
+            </optgroup>
+
+            <optgroup label="Other"> 
+
               <option value="Reception">Reception</option>
-              <option value="Annapurna">Annapurna</option>
-              <option value="VishalaCafe">Vishala Cafe</option>
+              <option value="Guru_Paduka_Vanam">Guru Paduka Vanam</option>
+              <option value="Divine_Services">Divine Services</option>
               <option value="Madhurya">Madhurya</option>
+              <option value="Vishalakshi_Mantap_front_side">Vishalalaski Mantap(front-side)</option>
+              <option value="Amphitheatre">Amphitheatre</option>
+              <option value="Vishalakshi_Mantap_back_side">Vishalakshi Mantap (back-side)</option>
+              <option value="Anugraha_Mantap">Anugraha Mantap</option>
+              <option value="Shiva_Temple">Shiva Temple</option>
+              <option value="Panchkarma_Gate">Panchkarma Gate</option>
+              <option value="Vaibhavi">Vaibhavi</option>
+              <option value="current_location">Current Location</option>
+              <option value="Hathishala">Hathishala</option>
+              <option value="A2_Milk_Cafe">A2 Milk Cafe</option>
+              <option value="Gaushala">Sri Sri Gaushala</option>
+              <option value="Patanjali_Mantap">Patanjali Mantap</option>
+              <option value="Ganga_Kutir">Ganga Kutir</option>
+              
+
+
+            </optgroup>
+
+
+
+             
+
+              
+
               <!-- Add more options as needed -->
             </select>
           </div>
           
-          <div>
+          <div id="dst" >
             <label for="destination-select">Destination:</label>
             <select id="destination-select">
-               <option value="Reception">Reception</option>
-               <option value="Annapurna">Annapurna</option>
-               <option value="VishalaCafe">Vishala Cafe</option>
-               <option value="Madhurya">Madhurya</option>
+              <optgroup label="Accommodations">
+                <option value="Vishala_Men_Dormitory">Vishala Men Dormitory</option>
+                <option value="Female_Dormitory_Yogini">Female Dormitory Yogini</option>
+                <option value="Aparna_Gate">Aparna</option>
+                <option value="Padmini_Gate">Padmini</option>
+                <optgroup label="Baswa Accommodations">
+                <optgroup label="Baswa Blocks">
+                <option value="Baswa_Accomodation">Baswa Accomodation</option>
+                <option value="Baswa_Accomodation_C">Baswa Block C</option>
+                <option value="Baswa_Accomodation_B">Baswa Block B</option>
+                <option value="Baswa_Accomodation_A">Baswa Block A</option>
+              </optgroup>
+                <optgroup label="Baswa Bunglows">
+                <option value="Baswa_Bunglow_1">Baswa Bunglow 1</option>
+                <option value="Baswa_Bunglow_2">Baswa Bunglow 2 </option>
+                <option value="Baswa_Bunglow_3">Baswa Bunglow 3</option>
+                <option value="Baswa_Bunglow_4">Baswa Bunglow 4</option>
+                <option value="Baswa_Bunglow_5">Baswa Bunglow 5</option>
+              </optgroup>
+            </optgroup>
+                <option value="Meera_Vanam">Meera Vanam</option>
+
+                <optgroup label="Setu Side Accommodations">
+                <option value="Vasuki">Vasuki</option>
+                <option value="Vasuki_2">Vasuki(Back-Side)</option>
+                <option value="Setu">Setu</option>
+                <option value="Nandi">Nandi</option>
+                <option value="Siddhi">Siddhi</option>
+                <option value="Riddhi">Riddhi</option>
+                <option value="Ganesh">Ganesh</option>
+                <option value="Parvati">Parvati</option>
+                <option value="Raddha">Raddha</option>
+                <option value="Meera">Meera</option>
+                <option value="Shiva">Shiva</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Mahavir">Mahavir</option>
+                <option value="Karthik">Mahavir</option>
+                <option value="Adishesha">Adishesha</option>
+              </optgroup>
+
+                <option value="Tulsi_Dormitory">Tulsi Dormitory</option>
+                <option value="Trotakacharya_Kutir">Trotakacharya Kutir</option>
+                <option value="Trotakacharya_Dormitory">Trotakacharya Dormitory</option>
+                <optgroup label="Yagnashala Accommodations">
+                <option value="Yagnashala_Accomodation">Yagnashala Accomodation</option>
+                <option value="Yagnashala_Accomodation_A">Yagnashala Block A</option>
+                <option value="Yagnashala_Accomodation_B">Yagnashala Block B</option>
+                <option value="Yagnashala_Accomodation_C">Yagnashala Block C</option>
+                <option value="Yagnashala_Accomodation_D">Yagnashala Block D</option>
+              </optgroup>
+                <option value="Vrinda_Van">Vrinda Van</option>
+                <option value="Soudamini">Soudamini Apartments</option>
+               
+                <option value="Gopi">Gopi</option>
+                <option value="Gokul">Gokul</option>
+                <option value="Gurukul_Cottages">Gurukul Cottages</option>
+                <option value="Sarda_Vihar">Sarda Vihar</option>
+
+              </optgroup>
+
+              <optgroup label="Course Venues">
+                <option value="Maitreyi_Hall">Maitreyi Hall</option>
+                <option value="Baswa_Hall">Baswa Hall</option>
+                <option value="Jamini_Hall">Jamini Hall</option>
+                <option value="Tripura_Hall">Tripura Hall</option>
+              <option value="Shat_Kriya_Hall">Shat Kriya Hall</option>
+              <option value="Vivasvan_Yogshala">Vivasvan Yogshala</option>
+              <option value="Kapila_Hall">Kapila Hall</option>
+              <option value="Saraswati_Hall_A">Saraswati Hall Block-A</option>
+              <option value="Saraswati_Hall_C">Saraswati Hall Block-C</option>
+              <option value="Gauri_Hall">Gauri Hall</option>
+              <option value="Shankra_Hall">Shankra Hall</option>
+              <option value="Vishalakshi_Mantap_GF">Vishalakshi Mantap GF</option>
+              <option value="Mahavir_Hall">Mahavir Hall</option>
+              <option value="Buddha_Hall">Buddha Hall</option>
+              <option value="Shuka_Hall">Shuka_Hall</option>
+              <option value="Badri_Vishala">BadriVishala</option>
+              <option value="Krishna_Hall">Krishna Hall</option>
+              <option value="Radha_Kunj_ConferenceHall">Radha Kunj Conference Hall</option>
+              <option value="Ganesha_Hall">Ganesha Hall</option>
+              <option value="Annapoorna_Hall">Annapoorna Hall</option>
+            </optgroup>
+
+            <optgroup label="Old Ashram">
+              <option value="TTP_YLTP_Office">TTP and YLTP Office</option>
+              <option value="Narayan">Narayan</option>
+              <option value="Devi_Place">Devi Place</option>
+              <option value="SSRDP">SSRDP</option>
+              <option value="Shanmukha">Shanmukha</option>
+              <option value="Rishimukh">Rishimukh</option>
+              <option value="VVKI">VVKI</option>
+              <option value="SBI">SBI</option>
+              <option value="Vasishta">Vasishta</option>
+              <option value="Vishwamitra">Vishwamitra</option>
+              <option value="Mahalakshmi_Mantap">Mahalakshmi Mantap</option>
+              <option value="Sumeru_Mantap">Sumeru Mantap</option>
+              <option value="Old_Amphitheater">Old Amphitheater</option>
+              <option value="Arundhati">Arundhati</option>
+              <option value="SSIAS">SSIAS</option>
+              <option value="IAHV">IAHV</option>
+              <option value="Gargi_Dinning_Hall">Gargi Dinning Hall</option>
+            </optgroup>
+
+            <optgroup label="Radha Kunj">
+              <option value="Radha_Kunj_Gate2">Radha Kunj Gate 2</option>
+              <option value="Radha_Kunj_Gate1">Radha Kunj Gate 1</option>
+              <option value="Mantap_Radha_Kunj">Mantap Radha Kunj</option>
+              <option value="Krishna_Kutir">Krishna Kutir</option>
+             
+
+
+            </optgroup>
+
+            <optgroup label="Gurukul"> 
+              <option value="Nakshatra_Vanam">Nakshatra Vanam</option>
+              <option value="Devi_Hall">Devi Hall</option>
+              <option value="Markandeya">Markandeya</option>
+              <option value="Veda_Bhavanam">Veda Bhavanam</option>
+              <option value="Vaidic_Bhavanam">Vaidic Bhavanam</option>
+              <option value="Archana">Archana</option>
+              <option value="Gurukul_Prayogshala">Gurukul Prayogshala</option>
+              <option value="Gurukul_Yagnashala">Gurukul Yagnashala</option>
+              <option value="Ganpati_Temple">Sri Pratapa Ganpathi Temple</option>
+              <option value="Gurukul">Veda Agama Pathashala and Vaidik Pathashala</option>
+
+
+            </optgroup>
+
+            <optgroup label="Gates"> 
+              <option value="Gate1">Gate1</option>
+              <option value="Gate5">Gate5</option>
+              <option value="Gate2">Gate2</option>
+              <option value="Gate3">Gate3</option>
+              <option value="Gate4">Gate4</option>
+
+            </optgroup>
+
+            <optgroup label="Dinning_Places"> 
+              <option value="Vishala_Cafe">Vishala Cafe</option>
+              <option value="Annapoorna">Annapoorna</option>
+              <option value="Cafe_Vishala_Bistro">Cafe Vishala Bistro</option>
+              <option value="Panchamrut">Panchamrut</option>
+             
+            </optgroup>
+
+            <optgroup label="Other"> 
+
+              <option value="Reception">Reception</option>
+              <option value="Guru_Paduka_Vanam">Guru Paduka Vanam</option>
+              <option value="Divine_Services">Divine Services</option>
+              <option value="Madhurya">Madhurya</option>
+              <option value="Vishalakshi_Mantap_front_side">Vishalalaski Mantap(front-side)</option>
+              <option value="Amphitheatre">Amphitheatre</option>
+              <option value="Vishalakshi_Mantap_back_side">Vishalakshi Mantap (back-side)</option>
+              <option value="Anugraha_Mantap">Anugraha Mantap</option>
+              <option value="Shiva_Temple">Shiva Temple</option>
+              <option value="Panchkarma_Gate">Panchkarma Gate</option>
+              <option value="Vaibhavi">Vaibhavi</option>
+              <option value="current_location">Current Location</option>
+              <option value="Hathishala">Hathishala</option>
+              <option value="A2_Milk_Cafe">A2 Milk Cafe</option>
+              <option value="Gaushala">Sri Sri Gaushala</option>
+              <option value="Patanjali_Mantap">Patanjali Mantap</option>
+              <option value="Ganga_Kutir">Ganga Kutir</option>
+
+
+            </optgroup>
+
+
+
+             
+
               <!-- Add more options as needed -->
             </select>
           </div>
+
+        </div>
    
    
       <div>
-        <button id="button" >Navigate</button>
+        <button id="button" class="button" >Navigate</button>
       </div>
 
     
@@ -58,3 +400,4 @@
    
 
 </html>
+
