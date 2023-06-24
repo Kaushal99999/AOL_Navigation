@@ -210,7 +210,7 @@ function updateCurrentLocation() {
       }
 
       // Set the map center to the user's location
-      map.setCenter(userLatLng);
+      // map.setCenter(userLatLng);
     },
     (error) => {
       console.error("Error getting user location:", error);
