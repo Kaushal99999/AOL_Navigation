@@ -1,8 +1,10 @@
 const findRoutes = require('./Get_routes');
 const dijkstra = require('./path');
+const findNearestPoint = require('./nearest-point');
+const  findNearestCoordinate = require('./nearest-coordinate');
 
 const path=require('path');
-const express = require('express');
+const express = require('express'); 
 const http = require('http');
 const socketIO = require('socket.io');
 
@@ -26,6 +28,8 @@ io.on('connection', (socket) => {
   socket.on('navigate', (data) => {
     const start=data.Start;
     const end=data.End;
+    
+
 
     const shortestPath = dijkstra(start, end);
     console.log(shortestPath);
@@ -37,12 +41,39 @@ io.on('connection', (socket) => {
   .catch(error => {
     console.error('Error:', error);
   });
+
        
                 
 
 });
-});
 
+
+socket.on('navigate_s', (data) => {
+  
+
+
+ const nearestPoint = findNearestPoint(data.currentLat, data.currentLng, data.Mar_Data);
+ const shortestPath = dijkstra(nearestPoint, data.End);
+
+  
+   findRoutes(shortestPath)
+ .then(result => {
+  const nearestCoordinate = findNearestCoordinate(data.currentLat, data.currentLng, result);
+  const startIndex = result.findIndex((coord) => coord.lat === nearestCoordinate.lat && coord.lng === nearestCoordinate.lng);
+  const filteredRoute =result.slice(startIndex)
+  filteredRoute.unshift({lat:data.currentLat,lng:data.currentLng})
+  socket.emit('navigate_Resps',filteredRoute);
+   // Use the result in this file or pass it to another file
+ })
+ .catch(error => {
+   console.error('Error:', error);
+ });
+   
+ });
+
+
+
+});
 
 
     // You can emit evenlng:ts back to the client or perform other actions here
