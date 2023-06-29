@@ -3,7 +3,7 @@ const fs = require('fs');
 const extractedValues = [];
 const filename = 'data.txt';
 // Step 1: Set up Mongoose connection
-mongoose.connect('mongodb+srv://root:tiger@cluster0.rfabwtl.mongodb.net/cluster0?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://root:tiger@cluster0.hmlmk6v.mongodb.net/cluster0?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
