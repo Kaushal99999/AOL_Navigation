@@ -132,13 +132,20 @@ var markerData = [
    { position: { lat:12.826861172612183 , lng:  77.50610550466455},name:"Radha Kunj Gate 1",value:"Radha_Kunj_Gate1"},
    { position: { lat:12.828024635846202 , lng:77.50492356389563},name:"Radha Kunj Conference Hall",value:"Radha_Kunj_ConferenceHall"},
    { position: { lat:12.827859938051384 , lng:77.50698097283623},name:"Patanjali Mantap",value:"Patanjali_Mantap"},
-   { position: { lat:   12.825711173988202 , lng:77.50844457211839},name:"Ganesha Hall",value:"Ganesha_Hall"},
-   { position: { lat:   12.824398165665617 , lng:77.50991582879632},name:"Ganga Kutir",value:"Ganga_Kutir"},
-   { position: { lat:   12.824149090906152 , lng:77.50853380873379},name:"Annapoorna Hall",value:"Annapoorna_Hall"},
-   {position:{},name:"Your Loc",value:"current_location"}, 
-
-
-
+   { position: { lat: 12.825711173988202 , lng:77.50844457211839},name:"Ganesha Hall",value:"Ganesha_Hall"},
+   { position: { lat: 12.824398165665617 , lng:77.50991582879632},name:"Ganga Kutir",value:"Ganga_Kutir"},
+   { position: { lat: 12.824149090906152 , lng:77.50853380873379},name:"Annapoorna Hall",value:"Annapoorna_Hall"},
+   { position: {lat:  12.825704174510292 , lng:77.50943116385122},name:"Information Center",value:"Information_Center"},
+   { position: {lat:  12.826907599969747 , lng:77.50977271034832},name:"Nadi Pariksha Center",value:"Nadi_Pariksha_Center"},
+   { position: {lat:  12.827518297865598 , lng:77.51003304912403},name:"Sumeru Travels",value:"Sumeru_Travels"},
+   { position: {lat:  12.826339681217354 , lng: 77.50977208304595},name:"Meditation Hall",value:"Meditation_Hall"},
+   { position: {lat:  12.826264491880771 , lng:77.50973855543661},name:"Juice Center",value:"Juice_Center"},
+   { position: {lat:     12.824947065503636 , lng:77.50844496268729},name:"Laundary",value:"Laundary"},
+   { position: {lat:     12.830581594429944 , lng:77.51058145552145},name:"Gate7",value:"Gate7"},
+   { position: {lat:     12.830502978969124 , lng:77.51045878279585},name:"Sri Sri Publications",value:"Sri_Sri_Publications"},
+   { position: {lat:     12.829051207426838 , lng:77.50900099226628},name:"Gate6",value:"Gate6"},
+   { position: {lat:    12.822882633588923 , lng:77.5138678567498},name:"Post Office",value:"Post_Office"},
+   {position:{},name:"Your Loc",value:"current_location"}
 ]
   // Add more marker positions and names as needed
 
