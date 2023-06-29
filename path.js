@@ -2,14 +2,15 @@
   function dijkstra( start, end) {
 
     const graph ={
-      Reception: {
-        Guru_Paduka_Vanam: 0.09256336640840945,
-        Gate5: 0.09608374531999625
+      Reception: { Parking_Lot_1: 0.06688139614511153, Gate5: 0.09608374531999625 },
+      Parking_Lot_1: {
+        Reception: 0.06688139614511153,
+        Guru_Paduka_Vanam: 0.01888938830928675
       },
       Guru_Paduka_Vanam: {
-        Reception: 0.09256336640840945,
+        Parking_Lot_1: 0.01888938830928675,
         T_point: 0.19738856034012192,
-        Vrinda_Van: 0.14779809396605761
+        T_point48: 0.13392149112167928
       },
       T_point: {
         Guru_Paduka_Vanam: 0.19738856034012192,
@@ -19,19 +20,33 @@
       Divine_Services: { T_point: 0.029428286704118678, Madhurya: 0.028676508849682827 },
       Madhurya: {
         Divine_Services: 0.028676508849682827,
-        T_point2: 0.07267505074966814
+        T_point47: 0.024408013736858632
       },
-      Vishala_Cafe: { T_point: 0.05984240191039364, T_point13: 0.02209121438029142 },
+      Vishala_Cafe: { T_point: 0.05984240191039364, SBI_V: 0.0029603966948303657 },
+      T_point47: {
+        Madhurya: 0.024408013736858632,
+        Nadi_Pariksha_Center: 0.05340993262262558,
+        T_point2: 0.027108780540572842
+      },
+      Nadi_Pariksha_Center: {
+        T_point47: 0.05340993262262558,
+        Sumeru_Travels: 0.07249330966138175
+      },
+      Sumeru_Travels: { Nadi_Pariksha_Center: 0.07249330966138175 },
       T_point2: {
-        Madhurya: 0.07267505074966814,
+        T_point47: 0.027108780540572842,
         T_point24: 0.05281366773473582,
+        Meditation_Hall: 0.01752615665340416,
         Vishalakshi_Mantap_back_side: 0.08126401426703553
       },
       T_point24: {
         T_point2: 0.05281366773473582,
         Vishalakshi_Mantap_front_side: 0.010595148069011961,
-        Gauri_Hall: 0.038297919138243354
+        Gauri_Hall: 0.038297919138243354,
+        Information_Center: 0.014858433201571467
       },
+      Meditation_Hall: { T_point2: 0.01752615665340416, Juice_Center: 0.005412646995430272 },
+      Juice_Center: { Meditation_Hall: 0.005412646995430272 },
       Vishalakshi_Mantap_front_side: {
         T_point24: 0.010595148069011961,
         Vishalakshi_Mantap_GF: 0.03554404761950243,
@@ -58,11 +73,15 @@
       Amphitheatre: { Vishalakshi_Mantap_front_side: 0.004752802272029777 },
       Vishalakshi_Mantap_back_side: {
         T_point2: 0.08126401426703553,
-        T_point8: 0.2579614822222106,
+        Laundary: 0.20815395856765823,
         T_point5: 0.02376002962782705
       },
+      Laundary: {
+        Vishalakshi_Mantap_back_side: 0.20815395856765823,
+        T_point8: 0.049067398566341514
+      },
       T_point8: {
-        Vishalakshi_Mantap_back_side: 0.2579614822222106,
+        Laundary: 0.049067398566341514,
         Gate3: 0.009129706469401668,
         T_point4: 0.10415050524608639,
         T_point16: 0.03404401120217734
@@ -152,8 +171,12 @@
       Kapila_Hall: { Vivasvan_Yogshala: 0.026902277776222693 },
       Anugraha_Mantap: { T_point11: 0.04192947739173982, Shiva_Temple: 0.04433107402674364 },
       Shiva_Temple: { Anugraha_Mantap: 0.04433107402674364 },
+      SBI_V: {
+        Vishala_Cafe: 0.0029603966948303657,
+        T_point13: 0.02455220494928629
+      },
       T_point13: {
-        Vishala_Cafe: 0.02209121438029142,
+        SBI_V: 0.02455220494928629,
         Vishala_Men_Dormitory: 0.024526593737659773,
         Female_Dormitory_Yogini: 0.09873298463302542
       },
@@ -387,16 +410,26 @@
       },
       Yagnashala_Accomodation_C: {
         Yagnashala_Accomodation_B: 0.08098472748016257,
-        Yagnashala_Accomodation_D: 0.08397206950835184
+        T_point49: 0.01821876064814046
       },
-      Yagnashala_Accomodation_D: {
-        Yagnashala_Accomodation_C: 0.08397206950835184,
-        Vrinda_Van: 0.04311201092779968
+      T_point49: {
+        Yagnashala_Accomodation_C: 0.01821876064814046,
+        Gate6: 0.04084997927864341,
+        Yagnashala_Accomodation_D: 0.06410701030836291
       },
+      Gate6: { T_point49: 0.04084997927864341 },
+      Yagnashala_Accomodation_D: { T_point49: 0.06410701030836291, Vrinda_Van: 0.04311201092779968 },
       Vrinda_Van: {
         Yagnashala_Accomodation_D: 0.04311201092779968,
-        Guru_Paduka_Vanam: 0.14779809396605761
+        T_point48: 0.00823025510757294
       },
+      T_point48: {
+        Vrinda_Van: 0.00823025510757294,
+        Sri_Sri_Publications: 0.10617679585284111,
+        Guru_Paduka_Vanam: 0.13392149112167928
+      },
+      Sri_Sri_Publications: { T_point48: 0.10617679585284111, Gate7: 0.008351432808880382 },
+      Gate7: { Sri_Sri_Publications: 0.008351432808880382 },
       Gate2: {
         T_point18: 0.04477255122124638,
         Soudamini: 0.08126210776816978,
@@ -450,7 +483,11 @@
         Gate1: 0.022028936765759097,
         IAHV: 0.011323680102084814
       },
-      SBI: { T_point28: 0.0049289021234955885 },
+      SBI: {
+        T_point28: 0.0049289021234955885,
+        Post_Office: 0.013206861674139442
+      },
+      Post_Office: { SBI: 0.013206861674139442 },
       Gate1: { T_point28: 0.022028936765759097 },
       T_point30: {
         T_point29: 0.045714866464382345,
@@ -493,7 +530,8 @@
       Patanjali_Mantap: { T_point46: 0.0073345178695029736 },
       Ganesha_Hall: { Shankra_Hall: 0.02596348465167393 },
       Ganga_Kutir: { T_point34: 0.0572821752069632 },
-      Annapoorna_Hall: { Annapoorna: 0.012188352883448978 }
+      Annapoorna_Hall: { Annapoorna: 0.012188352883448978 },
+      Information_Center: { T_point24: 0.014858433201571467 }
     }
     const distances = {};
     const previous = {};
