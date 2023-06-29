@@ -1,6 +1,6 @@
 // Step 6: Retrieve the combination of routes based on the given path
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://root:tiger@cluster0.rfabwtl.mongodb.net/cluster0?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://root:tiger@cluster0.hmlmk6v.mongodb.net/cluster0?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
