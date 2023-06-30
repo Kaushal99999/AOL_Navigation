@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <title>Navigation System</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
   
-  
-  
+
   
   
 </head>
@@ -420,7 +420,25 @@
     <footer>
                    <script
    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMGOO7USo2pbOWLBfexCtbhqh9VBdRAbU"> </script> 
+
    <script src="/socket.io/socket.io.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#source-select').select2({
+                placeholder: 'Select a Source',
+                allowClear: true,
+                tags:true
+            });
+
+            $('#destination-select').select2({
+                placeholder: 'Select a Destination',
+                allowClear: true,
+                tags:true
+            });
+          });
+          </script>
    <script src="app.js"></script>
     </footer>
 
@@ -428,4 +446,6 @@
    
 
 </html>
+
+
 
