@@ -195,6 +195,7 @@
        
               <option value="Sri Sri Publications">Sri_Sri_Publications</option>
               <option value="Post_Office"> Post Office</option>
+              <option value="Parking Lot"> Parking_Lot</option>
               
               
 
@@ -390,6 +391,7 @@
             
               <option value="Sri_Sri_Publications"> Sri Sri Publications</option>
               <option value="Post_Office"> Post Office</option>
+              <option value="Parking Lot"> Parking_Lot</option>
               
               
 
@@ -411,6 +413,11 @@
         <button id="button" class="button" >Navigate</button>
       </div>
 
+      <button id="current-location-btn" style="border: none; background: none; padding: 0;">
+        <img src="./icons8-current-location-64.png" alt="Button Image" style="width: 100px; height: 100px;">
+      </button>
+      <label id="label" for="current-location-btn">Current Location</label>
+
     
 
     </div>
@@ -428,16 +435,32 @@
         $(document).ready(function() {
             $('#source-select').select2({
                 placeholder: 'Select a Source',
-                allowClear: true,
                 tags:true
+            });
+
+            $('#source-select').on('select2:open', function() {
+                $('.select2-search__field').attr('placeholder', 'Type to search or select a Source');
             });
 
             $('#destination-select').select2({
                 placeholder: 'Select a Destination',
-                allowClear: true,
                 tags:true
             });
+
+            $('#destination-select').on('select2:open', function() {
+                $('.select2-search__field').attr('placeholder', 'Type to search or select a Destination');
+            });
+
+            $('#current-location-btn').on('click', function() {
+                // Programmatically select "Current Location" in the source select
+                $('#source-select').val('current_location').trigger('change');
+            });
+
           });
+
+         
+
+      
           </script>
    <script src="app.js"></script>
     </footer>
