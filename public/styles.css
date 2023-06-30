@@ -23,7 +23,7 @@ label {
 }
 
 #source-select{
-  margin-left: 75px;
+  margin-left: 66px;
 }
 select{
   width: 100%;
@@ -39,12 +39,17 @@ select{
 #dst{
   display: flex;
   font-size: xx-large;
+  border-color: black;
+  border-style: solid;
+  
 
 }
 
 #sorc{
   display: flex;
   font-size: xx-large;
+  border-style: solid;
+  border-color: black
   
 }
 .container2{
@@ -52,11 +57,9 @@ select{
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  width: 80%;
+  width: 100%;
   background-color:lightsteelblue;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding:50px;
-  margin-left:50px;
 }
 
 #map {
@@ -83,6 +86,79 @@ select{
 
 body{
   overflow: hidden;
+}
+
+
+#source-select + .select2-container--default .select2-selection--single {
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left:80px;
+  margin-bottom: 10px;
+  width:96.5%;
+}
+
+#destination-select + .select2-container--default .select2-selection--single {
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left:12px;
+  margin-bottom: 10px;
+  width:97%;
+
+}
+
+#source-select +.select2-container--default .select2-selection--single .select2-selection__arrow {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+
+}
+
+#destination-select +.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  right:66px;
+
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 80px;
+}
+.select2-container--default .select2-selection--single .select2-selection__clear {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #888 transparent transparent transparent;
+  border-width: 6px 4px 0 4px;
+}
+
+/* Adjust search input width */
+.select2-search__field {
+  width: 100%;
+}
+
+/* Adjust dropdown width */
+.select2-container--default .select2-results__option {
+  width: 100%;
+}
+
+/* Set max height for dropdown */
+.select2-container--default .select2-dropdown {
+  max-height: 200px;
+}
+
+/* Add custom background color to select2 dropdown */
+.select2-container--default .select2-results__option {
+  background-color: #f5f5f5;
 }
 
 @media only screen and (min-width: 480px) {
