@@ -158,7 +158,7 @@ async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
   map = new Map(document.getElementById("map"), {
     center: { lat: 12.828757724448145, lng: 77.51208469752524 },
-    zoom: 17,
+    zoom: 20,
     styles: [
         {
 
