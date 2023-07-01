@@ -144,7 +144,10 @@ var markerData = [
    { position: {lat:     12.830581594429944 , lng:77.51058145552145},name:"Gate7",value:"Gate7"},
    { position: {lat:     12.830502978969124 , lng:77.51045878279585},name:"Sri Sri Publications",value:"Sri_Sri_Publications"},
    { position: {lat:     12.829051207426838 , lng:77.50900099226628},name:"Gate6",value:"Gate6"},
+     { position: {lat:    12.829208409086238 , lng:77.51100893231441},name:"Parking Lot",value:"Parking_Lot"},
    { position: {lat:    12.822882633588923 , lng:77.5138678567498},name:"Post Office",value:"Post_Office"},
+    { position: {lat:    12.82423199162094 , lng: 77.50836760666816},name:"Swadishthan",value:"Swadishthan"},
+   { position: {lat:    12.824220153804054, lng:77.50860648014364},name:"Annapoorna_FirstFloor",value:"Annapoorna FirstFloor"},
    {position:{},name:"Your Loc",value:"current_location"}
 ]
   // Add more marker positions and names as needed
