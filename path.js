@@ -95,7 +95,8 @@
       Annapoorna: {
         Gate3: 0.007985320418537879,
         T_point9: 0.08986982574179804,
-        Annapoorna_Hall: 0.012188352883448978
+        Annapoorna_Hall: 0.012188352883448978,
+        Swadishthan: 0.023332800441639774
       },
       Aparna_Gate: {
         Gate3: 0.024716701518559453,
@@ -111,7 +112,8 @@
         T_point36: 0.023367152519453975,
         T_point8: 0.10415050524608639,
         T_point35: 0.007572792341833549,
-        T_point34: 0.02086085780941998
+        T_point34: 0.02086085780941998,
+        Annapoorna_FirstFloor: 0.14083270678442739
       },
       Secretariat: { T_point36: 0.008240758136142482 },
       T_point5: {
@@ -137,7 +139,11 @@
         Padmini_Gate: 0.10758516875438452,
         T_point18: 0.13458468176415844
       },
-      Padmini_Gate: { T_point9: 0.10758516875438452, Aparna_Gate: 0.15682913504785656 },
+      Padmini_Gate: {
+        T_point9: 0.10758516875438452,
+        Aparna_Gate: 0.15682913504785656,
+        Swadishthan: 0.11569996961601889
+      },
       T_point10: {
         Jamini_Hall: 0.0051448495243208185,
         Tripura_Hall: 0.029406382820192326,
@@ -531,7 +537,12 @@
       Ganesha_Hall: { Shankra_Hall: 0.02596348465167393 },
       Ganga_Kutir: { T_point34: 0.0572821752069632 },
       Annapoorna_Hall: { Annapoorna: 0.012188352883448978 },
-      Information_Center: { T_point24: 0.014858433201571467 }
+      Information_Center: { T_point24: 0.014858433201571467 },
+      Swadishthan: {
+        Annapoorna: 0.023332800441639774,
+        Padmini_Gate: 0.11569996961601889
+      },
+      Annapoorna_FirstFloor: { T_point4: 0.14083270678442739 }
     }
     const distances = {};
     const previous = {};
