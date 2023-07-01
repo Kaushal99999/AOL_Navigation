@@ -294,13 +294,20 @@ document.getElementById('button').addEventListener('click', function() {
         if (polyline) {
           polyline.setMap(null);
         }
-         polyline = new google.maps.Polyline({
-          path: route,
-          geodesic: true,
-          strokeColor: "#FF0000",
-          strokeOpacity: 1.0,
-          strokeWeight: 2,
-        });
+        polyline = new google.maps.Polyline({
+         path: route,
+        geodesic: true,
+        strokeColor: '#800000',
+        strokeOpacity: 0.8,
+        strokeWeight: 4, // Increase this value to make the line thicker
+        icons: [{
+          icon: { // Custom arrowhead icon
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 3, // Adjust the scale of the arrowhead
+          },
+          offset: '100%', // Position arrowhead at the end of the line
+        }],
+      });
         polyline.setMap(map);
       });
   
@@ -313,12 +320,19 @@ document.getElementById('button').addEventListener('click', function() {
       if (polyline) {
         polyline.setMap(null);
       }
-       polyline = new google.maps.Polyline({
-        path: route,
+        polyline = new google.maps.Polyline({
+         path: route,
         geodesic: true,
-        strokeColor: "#FF0000",
-        strokeOpacity: 1.0,
-        strokeWeight: 2,
+        strokeColor: '#800000',
+        strokeOpacity: 0.8,
+        strokeWeight: 4, // Increase this value to make the line thicker
+        icons: [{
+          icon: { // Custom arrowhead icon
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 3, // Adjust the scale of the arrowhead
+          },
+          offset: '100%', // Position arrowhead at the end of the line
+        }],
       });
       polyline.setMap(map);
     });
