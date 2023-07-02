@@ -151,6 +151,7 @@ function get_current_loc(){
 //    {position:{},name:"Your Loc",value:"current_location"}
 // ]
   // Add more marker positions and names as needed
+
 var markerData = [
   { position: { lat: 12.827148739101151, lng:   77.51039403444722 }, name: "Vishala Cafe" ,value:"Vishala_Cafe"},
   { position: { lat:  12.829063170223693, lng: 77.5115431933855 }, name: "Reception" ,value:"Reception"},
@@ -281,15 +282,15 @@ var markerData = [
    { position: {lat:     12.830581594429944 , lng:77.51058145552145},name:"Gate7",value:"Gate7"},
    { position: {lat:     12.830502978969124 , lng:77.51045878279585},name:"Sri Sri Publications",value:"Sri_Sri_Publications"},
    { position: {lat:     12.829051207426838 , lng:77.50900099226628},name:"Gate6",value:"Gate6"},
+     { position: {lat:    12.829208409086238 , lng:77.51100893231441},name:"Parking Lot",value:"Parking_Lot"},
    { position: {lat:    12.822882633588923 , lng:77.5138678567498},name:"Post Office",value:"Post_Office"},
-   { position: {lat:    12.829208409086238 , lng:77.51100893231441},name:"Parking Lot",value:"Parking_Lot"},
-   { position: {lat:    12.82423199162094 , lng: 77.50836760666816},name:"Swadishthan",value:"Swadishthan"},
+    { position: {lat:    12.82423199162094 , lng: 77.50836760666816},name:"Swadishthan",value:"Swadishthan"},
    { position: {lat:    12.824220153804054, lng:77.50860648014364},name:"Annapoorna_FirstFloor",value:"Annapoorna FirstFloor"},
    { position: {lat:    12.82748542265882, lng:77.51017849700614},name:"T_point",value:"T_point"},
-   { position: {lat:    12.826731372085195, lng:77.50970039605184},name:"T_point47",value:"T_point47"},,
-   { position: {lat:    12.826327084647229, lng:77.50955586651995},name:"T_point2",value:"T_point2"},,
-   { position: {lat:    12.825829380191088, lng:77.5093645275042},name:"T_point24",value:"T_point24"},,
-   { position: {lat:    12.82456784739004, lng:77.50864210503022},name:"T_point8",value:"T_point8"},, 
+   { position: {lat:    12.826731372085195, lng:77.50970039605184},name:"T_point47",value:"T_point47"},
+   { position: {lat:    12.826327084647229, lng:77.50955586651995},name:"T_point2",value:"T_point2"},
+   { position: {lat:    12.825829380191088, lng:77.5093645275042},name:"T_point24",value:"T_point24"},
+   { position: {lat:    12.82456784739004, lng:77.50864210503022},name:"T_point8",value:"T_point8"},
    { position: {lat:    12.825353819468692, lng:77.5093323782028},name:"T_point36",value:"T_point36"},
    { position: {lat:    12.825163069691932, lng:77.50946365651721},name:"T_point4",value:"T_point4"},
    { position: {lat:    12.826398877881255, lng:77.5084283487442},name:"T_point5",value:"T_point5"},
@@ -358,9 +359,9 @@ var markerData = [
    { position: {lat:  12.825114856270341, lng:77.5080830255743},name:"T_point73",value:"T_point73"},
    { position: {lat:  12.8248113986568, lng:77.50363529754735},name:"T_point74",value:"T_point74"},
    { position: {lat:  12.826456456172604, lng:77.50249415150631},name:"T_point75",value:"T_point75"},
-   {position:{},name:"Your Loc",value:"current_location"}, 
-]
+   {position:{},name:"Your Loc",value:"current_location"},
 
+]
 
 var icon={url:"./standing-up-man-svgrepo-com.svg",
 scaledSize: new google.maps.Size(50, 50),
