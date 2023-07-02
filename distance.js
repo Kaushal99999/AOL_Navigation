@@ -68,10 +68,9 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
 
       console.log(extracted)
 
-  
-      // Process the data for each record as per your requirement
+
     });
 });
-  // Example usage
+
 
   
