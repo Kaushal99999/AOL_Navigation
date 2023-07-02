@@ -252,19 +252,6 @@ async function initMap() {
 
   
 
-
-
-    
-    // for (var i = 0; i < markerData.length; i++) {
-    //     var marker = new google.maps.Marker({
-    //       position: markerData[i].position, // Set the marker position
-    //       map: map, // Specify the map
-    //       label: markerData[i].name // Set the marker title or label
-    //     });
-    // }
-
-
-
 }
 
 function getCoordinatesFromName(name) {
@@ -336,7 +323,7 @@ document.getElementById('button').addEventListener('click', function() {
     
     
     
-        // Add more locations as needed
+
     
     var sourceSelect = document.getElementById('source-select');
     var destinationSelect = document.getElementById('destination-select');
@@ -381,7 +368,7 @@ document.getElementById('button').addEventListener('click', function() {
         geodesic: true,
         strokeColor: '#800000',
         strokeOpacity: 0.8,
-        strokeWeight: 4, // Increase this value to make the line thicker
+        strokeWeight: 6, // Increase this value to make the line thicker
         icons: [{
           icon: { // Custom arrowhead icon
             path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
@@ -394,7 +381,7 @@ document.getElementById('button').addEventListener('click', function() {
       });
   
     }
-    // calculateAndDisplayRoute(source, destination);
+
 
     else{
     socket.emit('navigate',{Start:source,End:destination});
