@@ -1,7 +1,7 @@
 // Define the graph as an adjacency matrix
   function dijkstra( start, end) {
 
-    {
+   const graph = {
       Parking_Lot_1: {
         Guru_Paduka_Vanam: 0.01888938830928675,
         Reception: 0.06688139614511153
