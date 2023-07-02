@@ -285,7 +285,7 @@ function updateCurrentLocation() {
       }
 
       // Set the map center to the user's location
-      map.setCenter(userLatLng);
+      map.panTo(userLatLng);
       map.setOptions({
   draggable: true
 });
