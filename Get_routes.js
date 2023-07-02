@@ -1,4 +1,4 @@
-// Step 6: Retrieve the combination of routes based on the given path
+
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://root:tiger@cluster0.hmlmk6v.mongodb.net/cluster0?retryWrites=true&w=majority', {
   useNewUrlParser: true,
@@ -61,12 +61,10 @@ async function findRoutes(array) {
       const cleanedRoute = route.map(({ lat, lng }) => ({ lat, lng }));
       result = result.concat(cleanedRoute);
     }
-    // mongoose.disconnect();
 
-    // return result
+
     console.log(result);
     return result;
-    // You can perform additional operations with the 'result' array here
   } catch (error) {
     console.error('Error:', error);
   }
