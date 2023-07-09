@@ -198,7 +198,7 @@
               <option value="Sri_Sri_Publications">Sri Sri Publications</option>
               <option value="Post_Office"> Post Office</option>
               <option value="Parking_Lot"> Parking Lot</option>
-                <option value="Laundary"> Laundary</option>
+              <option value="Laundary"> Laundary</option>
               
               
 
@@ -397,7 +397,7 @@
               <option value="Sri_Sri_Publications"> Sri Sri Publications</option>
               <option value="Post_Office"> Post Office</option>
               <option value="Parking_Lot"> Parking Lot</option>
-                <option value="Laundary"> Laundary</option>
+              <option value="Laundary"> Laundary</option>
               
               
 
@@ -424,19 +424,24 @@
       </button>
       <label id="label" for="current-location-btn">Current Location</label>
 
+        
+      
     
 
     </div>
+    <button id="rotateLeftButton"><img src="./icons8-gps-96 (3).png" alt=""></button>
+    <button id="rotateRightButton"><img src="./icons8-gps-96 (2).png" alt=""></button>
+    <button id="tiltDownButton"><img src="./icons8-gps-96.png" alt=""></button>
+    <button id="tiltUpButton"><img src="./icons8-gps-96 (1).png" alt=""></button>
+
+
 
 
 
     <footer>
                    <script
-   src="https://maps.googleapis.com/maps/api/js?key=YourAPIKEY"> </script> ? 
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMGOO7USo2pbOWLBfexCtbhqh9VBdRAbU"> </script> 
 
-        
- <!-- Replace YourAPIKEY with your google api key -->
-        
    <script src="/socket.io/socket.io.js"></script>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
@@ -461,7 +466,7 @@
             });
 
             $('#current-location-btn').on('click', function() {
-                
+                // Programmatically select "Current Location" in the source select
                 $('#source-select').val('current_location').trigger('change');
             });
 
@@ -478,6 +483,5 @@
    
 
 </html>
-
 
 
