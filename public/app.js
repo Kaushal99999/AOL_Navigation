@@ -13,6 +13,9 @@ function get_current_loc(){
     },{ enableHighAccuracy: true, timeout: 5000, maximumAge: 0 });
       return {lat:c_Lat,lng:c_Lng}
 };
+
+
+
 var markerData = [
   { position: { lat: 12.827148739101151, lng:   77.51039403444722 }, name: "Vishala Cafe" ,value:"Vishala_Cafe"},
   { position: { lat:  12.829063170223693, lng: 77.5115431933855 }, name: "Reception" ,value:"Reception"},
@@ -246,13 +249,57 @@ async function initMap() {
           disableDefaultUI: true,
           stylers: [{ visibility: "off" }], // Set the visibility of POI labels to "off"
         }
-      ], gestureHandling: "greedy"
+      ], gestureHandling: "greedy",
+      mapId: "5786696bc881f3eb",
+      tilt: 20
   });
 
 
-  
 
+    
 }
+
+
+const rotateLeftButton = document.getElementById("rotateLeftButton");
+const rotateRightButton = document.getElementById("rotateRightButton");
+const tiltDownButton = document.getElementById("tiltDownButton");
+const tiltUpButton = document.getElementById("tiltUpButton");
+
+// Attach event listeners to the buttons
+rotateLeftButton.addEventListener("click", () => {
+  adjustMap("rotate", 20);
+});
+
+rotateRightButton.addEventListener("click", () => {
+  adjustMap("rotate", -20);
+});
+
+tiltDownButton.addEventListener("click", () => {
+  adjustMap("tilt", 20);
+});
+
+tiltUpButton.addEventListener("click", () => {
+  adjustMap("tilt", -20);
+});
+
+const adjustMap = function (mode, amount) {
+  switch (mode) {
+    case "tilt":
+      map.setTilt(map.getTilt() + amount);
+      break;
+    case "rotate":
+      map.setHeading(map.getHeading() + amount);
+      break;
+    default:
+      break;
+  }
+};
+
+
+
+
+
+
 
 function getCoordinatesFromName(name) {
   for (let i = 0; i < markerData.length; i++) {
@@ -323,7 +370,7 @@ document.getElementById('button').addEventListener('click', function() {
     
     
     
-
+        // Add more locations as needed
     
     var sourceSelect = document.getElementById('source-select');
     var destinationSelect = document.getElementById('destination-select');
@@ -381,7 +428,7 @@ document.getElementById('button').addEventListener('click', function() {
       });
   
     }
-
+    // calculateAndDisplayRoute(source, destination);
 
     else{
     socket.emit('navigate',{Start:source,End:destination});
@@ -394,7 +441,7 @@ document.getElementById('button').addEventListener('click', function() {
         geodesic: true,
         strokeColor: '#800000',
         strokeOpacity: 0.8,
-        strokeWeight: 4, // Increase this value to make the line thicker
+        strokeWeight: 6, // Increase this value to make the line thicker
         icons: [{
           icon: { // Custom arrowhead icon
             path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
@@ -419,5 +466,6 @@ document.getElementById('button').addEventListener('click', function() {
 
 initMap();
 updateCurrentLocation();
+adjustMap("tilt", 20);
 
 
