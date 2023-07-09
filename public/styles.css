@@ -3,7 +3,7 @@
   top:0rem;
   z-index:  7rem;
   left:0rem;
-  right:0rem; 
+  right:0rem; /* Set the desired dimensions here */
   background-position: center center;
   background-color: #f5f5f5;
   position:fixed;
@@ -181,6 +181,50 @@ body{
   
   
 }
+
+
+
+
+
+
+#rotateLeftButton{
+  position: absolute;
+  z-index:  1000px;
+  bottom:700px;
+  font-size: 40px;
+  left:0px;
+
+}
+
+#rotateRightButton{
+  position: absolute;
+  z-index:  1000px;
+  bottom:700px;
+  font-size: 40px;
+  right: 0px;
+}
+
+#tiltDownButton{
+  position: absolute;
+  z-index:  1000px;
+  bottom: 700px;
+  font-size: 40px;
+  bottom: 0px;
+  left:400px;
+
+}
+
+#tiltUpButton{
+  position: absolute;
+  z-index:  1000px;
+  font-size: 40px;
+  top: 730px;
+  left:400px;
+
+
+}
+
+
 
 @media only screen and (min-width: 480px) {
   .container {
